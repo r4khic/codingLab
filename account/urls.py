@@ -3,18 +3,19 @@ from django.contrib.auth.views import (
     PasswordResetView,
     PasswordResetDoneView,
     PasswordResetConfirmView,
-    PasswordResetCompleteView
+    PasswordResetCompleteView,
+    PasswordChangeView,
+    PasswordChangeDoneView,
 )
-from .views import index, signup, log_in, log_out, profile
+from . import views
+from django.urls import reverse_lazy
 
-# email test@gmail.com
-# pass BXEOEgb3
 
 urlpatterns = [
-    path("", index, name="home"),
-    path('signup/', signup, name='signup'),
-    path('login/', log_in, name='login'),
-    path('logout/', log_out, name='logout'),
+    path("", views.index, name="home"),
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.log_in, name='login'),
+    path('logout/', views.log_out, name='logout'),
     path('password_reset/', PasswordResetView.as_view(
         template_name='password_reset.html',
         email_template_name='password_reset_email.html',
@@ -35,5 +36,12 @@ urlpatterns = [
         template_name='password_reset_complete.html'),
          name='password_reset_complete'
          ),
-    path('profile/<username>/', profile, name='profile'),
+    path('password_change/', PasswordChangeView.as_view(
+        template_name='password_change.html',
+        success_url=reverse_lazy('password_change_done')),
+         name='password_change'),
+    path('password_change/done/', PasswordChangeDoneView.as_view(
+        template_name='password_change_done.html'),
+         name='password_change_done'),
+    path('profile/<username>/', views.profile, name='profile'),
 ]
