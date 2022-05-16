@@ -11,9 +11,14 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
+    profile_category = (
+        ('Professor', 'Professor'),
+        ('Student', 'Student'),
+    )
     about_me = models.TextField()
     image = models.ImageField(upload_to='profile_image', null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_category = models.CharField(max_length=100, choices=profile_category, null=True)
 
     def __str__(self):
         return self.user.username
