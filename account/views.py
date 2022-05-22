@@ -8,6 +8,10 @@ from .forms import SignUpForm, LoginForm
 
 
 def index(request):
+    return render(request, "index.html")
+
+
+def home(request):
     return render(request, "base.html")
 
 
@@ -20,7 +24,7 @@ def signup(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Congratulations, you are now a registered user!")
-            return redirect('home')
+            return redirect('login')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})

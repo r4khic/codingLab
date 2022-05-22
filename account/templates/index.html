@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <title>RateIt | Landing Page</title>
-  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/svg" />
-  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../assets/css/lineicons.css" />
-  <link rel="stylesheet" href="../assets/css/tiny-slider.css" />
-  <link rel="stylesheet" href="../assets/css/glightbox.min.css" />
-  <link rel="stylesheet" href="../static/landing.css" />
+  <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/svg" />
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/lineicons.css' %}" />
+  <link rel="stylesheet" href="{% static '/assets/css/tiny-slider.css' %}" />
+  <link rel="stylesheet" href="{% static '/assets/css/glightbox.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'landing.css' %}" />
 </head>
 
 <body>
@@ -24,7 +26,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
-              <img src="../assets/images/white-blue-logo.png" alt="Logo" />
+              <img src="{% static '/assets/images/white-blue-logo.png' %}" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
               aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,7 +77,7 @@
     </div>
     <div class="sidebar-content">
       <div class="sidebar-logo">
-        <a href="index.html"><img src="../assets/images/black-white-logo.png" alt="Logo" /></a>
+        <a href="index.html"><img src="{% static '/assets/images/black-white-logo.png' %}" alt="Logo" /></a>
       </div>
       <p class="text">Navigate through the service as fast as you wish.</p>
       <div class="sidebar-menu">
@@ -83,8 +85,8 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Our Team</a></li>
-          <li><a href="login.html">Log in</a></li>
-          <li><a href="signup.html">Sign up</a></li>
+          <li><a href="{% url 'login' %}">Log in</a></li>
+          <li><a href="{% url 'signup' %}">Sign up</a></li>
         </ul>
       </div>
       <div class="sidebar-social align-items-center justify-content-center">
@@ -118,7 +120,7 @@
               Service for quickly researching and rating professors.
             </p>
             <div class="button">
-              <a href="signup.html" class="btn primary-btn">Get Started</a>
+              <a href="{% url 'signup' %}" class="btn primary-btn">Get Started</a>
               <a href="https://youtu.be/DiDzrmuXvto"
                 class="glightbox video-button">
                 <span class="btn icon-btn rounded-full">
@@ -131,7 +133,7 @@
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            <img src="../assets/images/header/hero-image.jpg" alt="#" />
+            <img src="{% static '/assets/images/header/hero-image.jpg' %}" alt="#" />
           </div>
         </div>
       </div>
@@ -226,7 +228,7 @@
               <circle cx="60.333" cy="132" r="1.66667" fill="#DADADA" />
               <circle cx="104" cy="132" r="1.66667" fill="#DADADA" />
             </svg>
-            <img src="../assets/images/about/about-img1.jpg" alt="about" />
+            <img src="{% static '/assets/images/about/about-img1.jpg' %}" alt="about" />
           </div>
         </div>
         <div class="col-lg-6 col-12">
@@ -518,9 +520,9 @@
           <!-- Single News -->
           <div class="single-news">
             <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="../assets/images/blog/1.jpg" alt="Blog" /></a>
+              <a href="javascript:void(0)"><img class="thumb" src="{% static '/assets/images/blog/1.jpg' %}" alt="Blog" /></a>
               <div class="meta-details">
-                <img class="thumb" src="../assets/images/blog/rakhatbek.png" alt="Author" />
+                <img class="thumb" src="{% static '/assets/images/blog/rakhatbek.png' %}" alt="Author" />
                 <span>RAKHATBEK ARINOV</span>
               </div>
             </div>
@@ -538,9 +540,9 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="single-news">
             <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="../assets/images/blog/2.jpg" alt="Blog" /></a>
+              <a href="javascript:void(0)"><img class="thumb" src="{% static '/assets/images/blog/2.jpg' %}" alt="Blog" /></a>
               <div class="meta-details">
-                <img class="thumb" src="../assets/images/blog/yerassyl.jpg" alt="Author" />
+                <img class="thumb" src="{% static '/assets/images/blog/yerassyl.jpg' %}" alt="Author" />
                 <span>YERASSYL SAPARBEKOV</span>
               </div>
             </div>
@@ -560,9 +562,9 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="single-news">
             <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="../assets/images/blog/3.png" alt="Blog" /></a>
+              <a href="javascript:void(0)"><img class="thumb" src="{% static '/assets/images/blog/3.png' %}" alt="Blog" /></a>
               <div class="meta-details">
-                <img class="thumb" src="../assets/images/blog/alikhan.jpg" alt="Author" />
+                <img class="thumb" src="{% static '/assets/images/blog/alikhan.jpg' %}" alt="Author" />
                 <span>ALIKHAN MADENI</span>
               </div>
             </div>
@@ -603,13 +605,13 @@
         <div class="col-lg-8 offset-lg-2 col-12">
           <div class="clients-logos">
             <div class="single-image">
-              <img src="../assets/images/client-logo/aitu.jpg" alt="University Logo Images" />
+              <img src="..{% static '/assets/images/client-logo/aitu.jpg' %}" alt="University Logo Images" />
             </div>
             <div class="single-image">
-              <img src="../assets/images/client-logo/nu.jpg" alt="University Logo Images" />
+              <img src="{% static '/assets/images/client-logo/nu.jpg' %}" alt="University Logo Images" />
             </div>
             <div class="single-image">
-              <img src="../assets/images/client-logo/iitu.jpg" alt="University Logo Images" />
+              <img src="{% static '/assets/images/client-logo/iitu.jpg' %}" alt="University Logo Images" />
             </div>
           </div>
         </div>
@@ -683,7 +685,7 @@
               <div class="footer-widget f-about">
                 <div class="logo">
                   <a href="index.html">
-                    <img src="../assets/images/black-white-logo.png" alt="RateIt logo" class="img-fluid" />
+                    <img src="{% static '/assets/images/black-white-logo.png' %}" alt="RateIt logo" class="img-fluid" />
                   </a>
                 </div>
                 <p>
@@ -737,10 +739,10 @@
     <i class="lni lni-chevron-up"></i>
   </a>
 
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/glightbox.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/tiny-slider.js"></script>
+  <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static '/assets/js/glightbox.min.js' %}"></script>
+  <script src="{% static '/assets/js/main.js' %}"></script>
+  <script src="{% static '/assets/js/tiny-slider.js' %}"></script>
 
   <script>
 
