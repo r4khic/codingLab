@@ -59,3 +59,15 @@ def profile(request, username):
     user = get_object_or_404(User, username=username)
     profile = get_object_or_404(Profile, user=user)
     return render(request, 'profile.html', {'profile': profile, 'user': user})
+
+
+def edit_profile(request):
+    return render(request, 'edit_profile.html')
+
+
+def someone_profile(request):
+    return render(request, 'someone_profile.html')
+
+
+def add_profile(request):
+    return render(request, 'add_profile.html')

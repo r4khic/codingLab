@@ -1,150 +1,331 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Educational registration form</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
-      html, body {
-      min-height: 100%;
-      }
-      body, div, form, input, select, p {
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #eee;
-      }
-      body {
-      background: url("assets/images/background_add.jpeg") no-repeat center;
-      background-size: cover;
-      }
-      h1, h2 {
-      text-transform: uppercase;
-      font-weight: 400;
-      }
-      h2 {
-      margin: 0 0 0 8px;
-      }
-      .main-block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 25px;
-      background: rgba(0, 0, 0, 0.5);
-      }
-      .left-part, form {
-      padding: 25px;
-      }
-      .left-part {
-      text-align: center;
-      }
-      .fa-graduation-cap {
-      font-size: 72px;
-      }
-      form {
-      background: rgba(0, 0, 0, 0.7);
-      }
-      .title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      }
-      .info {
-      display: flex;
-      flex-direction: column;
-      }
-      input, select {
-      padding: 5px;
-      margin-bottom: 30px;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
-      }
-      input::placeholder {
-      color: #eee;
-      }
-      option:focus {
-      border: none;
-      }
-      option {
-      background: black;
-      border: none;
-      }
-      .checkbox input {
-      margin: 0 10px 0 0;
-      vertical-align: middle;
-      }
-      .checkbox a {
-      color: #26a9e0;
-      }
-      .checkbox a:hover {
-      color: #85d6de;
-      }
-      .btn-item, button {
-      padding: 10px 5px;
-      margin-top: 20px;
-      border-radius: 5px;
-      border: none;
-      background: #26a9e0;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 400;
-      color: #fff;
-      }
-      .btn-item {
-      display: inline-block;
-      margin: 20px 5px 0;
-      }
-      button {
-      width: 100%;
-      }
-      button:hover, .btn-item:hover {
-      background: #85d6de;
-      }
-      @media (min-width: 568px) {
-      html, body {
-      height: 100%;
-      }
-      .main-block {
-      flex-direction: row;
-      height: calc(100% - 50px);
-      }
-      .left-part, form {
-      flex: 1;
-      height: auto;
-      }
-      }
+        html, body {
+            min-height: 100%;
+        }
+
+        body, div, form, input, select, p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: #eee;
+        }
+
+        body {
+            background: url("static/assets/images/background_add.jpeg") no-repeat center;
+            background-size: cover;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        h2 {
+            margin: 0 0 0 8px;
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .left-part, form {
+            padding: 25px;
+        }
+
+        .left-part {
+            text-align: center;
+        }
+
+        .fa-graduation-cap {
+            font-size: 72px;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select {
+            padding: 5px;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        input::placeholder {
+            color: #eee;
+        }
+
+        option:focus {
+            border: none;
+        }
+
+        option {
+            background: black;
+            border: none;
+        }
+
+        .checkbox input {
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+
+        .checkbox a {
+            color: #26a9e0;
+        }
+
+        .checkbox a:hover {
+            color: #85d6de;
+        }
+
+        .btn-item, button {
+            padding: 10px 5px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #26a9e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .btn-item {
+            display: inline-block;
+            margin: 20px 5px 0;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        button:hover, .btn-item:hover {
+            background: #85d6de;
+        }
+
+        @media (min-width: 568px) {
+            html, body {
+                height: 100%;
+            }
+
+            .main-block {
+                flex-direction: row;
+                height: calc(100% - 50px);
+            }
+
+            .left-part, form {
+                flex: 1;
+                height: auto;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="main-block">
-      <div class="left-part">
+</head>
+
+<body>
+<section class="navbar-area navbar-nine">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{% static '/assets/images/white-blue-logo.png' %}" alt="Logo"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
+                            aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="page-scroll active" href="#hero-area">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll active" href="#hero-area">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-btn d-none d-lg-inline-block">
+                        <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="main-block">
+    <div class="left-part">
         <i class="fas fa-graduation-cap"></i>
         <h1>Add a new professor or institution</h1>
-        <p>RateIt does its best to expand its list of professors and universities. Your assist plays a proactive role in this context.</p>
-      </div>
-      <form action="/">
+        <p>RateIt does its best to expand its list of professors and universities. Your assist plays a proactive role in
+            this context.</p>
+    </div>
+    <form action="/">
         <div class="title">
-          <i class="fas fa-pencil-alt"></i>
-          <h2>Please, provide all the information below</h2>
+            <i class="fas fa-pencil-alt"></i>
+            <h2>Please, provide all the information below</h2>
         </div>
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="First name">
-          <input class="sname" type="text" name="name" placeholder="Second name">
-          <input type="text" name="name" placeholder="E-mail">
-          <input type="text" name="name" placeholder="Nickname">
-          <input type="password" name="name" placeholder="Password">
-          <select>
-            <option value="professor" selected>Professor</option>
-            <option value="institution">Institution (organizaiton)</option>
-          </select>
+            <input class="fname" type="text" name="name" placeholder="First name">
+            <input class="sname" type="text" name="name" placeholder="Second name">
+            <input type="text" name="name" placeholder="E-mail">
+            <input type="text" name="name" placeholder="Nickname">
+            <input type="password" name="name" placeholder="Password">
+            <select>
+                <option value="professor" selected>Professor</option>
+                <option value="institution">Institution (organizaiton)</option>
+            </select>
         </div>
         <button type="submit" href="/">Submit</button>
-      </form>
+    </form>
+</div>
+
+<footer class="footer-area footer-eleven">
+    <div class="footer-top">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-about">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static '/assets/images/black-white-logo.png' %}" alt="RateIt logo"
+                                         class="img-fluid"/>
+                                </a>
+                            </div>
+                            <p>
+                                Making the world a better place through constructive critic.
+                            </p>
+                            <p class="copyright-text">
+                                <span>© 2022 RateIt.</span>Designed and Developed by
+                                <a href="javascript:void(0)" rel="nofollow"> "Team Google" </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Solutions</h5>
+                            <ul>
+                                <li><a href="javascript:void(0)">Marketing</a></li>
+                                <li><a href="javascript:void(0)">Analytics</a></li>
+                                <li><a href="javascript:void(0)">Commerce</a></li>
+                                <li><a href="javascript:void(0)">Insights</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Support</h5>
+                            <ul>
+                                <li><a href="javascript:void(0)">Pricing</a></li>
+                                <li><a href="javascript:void(0)">Documentation</a></li>
+                                <li><a href="javascript:void(0)">Guides</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Follow Us</h5>
+                            <ul>
+                                <li><a href="https://api.whatsapp.com/send?%20phone=87755129395">WhatsApp</a></li>
+                                <li><a href="https://t.me/YeraSz">Telegram</a></li>
+                                <li><a href="https://www.instagram.com/yerasap">Instagram</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</footer>
+<!------------------------- MAIN -------------------------->
+
+
+<script src="{% static 'index.js' %}"></script>
+
+
+<a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"></i>
+</a>
+
+<script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/assets/js/glightbox.min.js' %}"></script>
+<script src="{% static '/assets/js/main.js' %}"></script>
+<script src="{% static '/assets/js/tiny-slider.js' %}"></script>
+
+<script>
+
+    //===== close navbar-collapse when a  clicked
+    let navbarTogglerNine = document.querySelector(
+        ".navbar-nine .navbar-toggler"
+    );
+    navbarTogglerNine.addEventListener("click", function () {
+        navbarTogglerNine.classList.toggle("active");
+    });
+
+    // ==== left sidebar toggle
+    let sidebarLeft = document.querySelector(".sidebar-left");
+    let overlayLeft = document.querySelector(".overlay-left");
+    let sidebarClose = document.querySelector(".sidebar-close .close");
+
+    overlayLeft.addEventListener("click", function () {
+        sidebarLeft.classList.toggle("open");
+        overlayLeft.classList.toggle("open");
+    });
+    sidebarClose.addEventListener("click", function () {
+        sidebarLeft.classList.remove("open");
+        overlayLeft.classList.remove("open");
+    });
+
+    // ===== navbar nine sideMenu
+    let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
+
+    sideMenuLeftNine.addEventListener("click", function () {
+        sidebarLeft.classList.add("open");
+        overlayLeft.classList.add("open");
+    });
+
+    //========= glightbox
+    GLightbox({
+        'href': 'https://www.youtube.com/watch?v=DiDzrmuXvto&feature=youtu.be',
+        'type': 'video',
+        'source': 'youtube',
+        'width': 900,
+        'autoplayVideos': true,
+    });
+
+</script>
+</body>
 </html>

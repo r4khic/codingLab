@@ -1,77 +1,79 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>RateIt | Profile View</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="{% static 'landing.css' %}">
-    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/svg" />
-    <link rel="stylesheet" href="{% static 'assets/css/lineicons.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'stars.css' %}" />
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/svg"/>
+    <link rel="stylesheet" href="{% static 'assets/css/lineicons.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'stars.css' %}"/>
 </head>
 <body>
 
 <section class="navbar-area navbar-nine">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">
-              <img src="{% static '/assets/images/white-blue-logo.png' %}" alt="Logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
-              aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-            </button>
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{% static '/assets/images/white-blue-logo.png' %}" alt="Logo"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
+                            aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
 
-            <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="page-scroll active" href="#hero-area">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#about">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#details">Why Us?</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#team">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#university">Institutions</a>
-                </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#contact">Contact</a>
-                </li>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="page-scroll active" href="#hero-area">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#details">Why Us?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#team">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#university">Institutions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#contact">Contact</a>
+                            </li>
 
-              </ul>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-btn d-none d-lg-inline-block">
+                        <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
+                    </div>
+                </nav>
             </div>
-
-            <div class="navbar-btn d-none d-lg-inline-block">
-              <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
-            </div>
-          </nav>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <main>
     <div class="container">
-        <div class="img" style="    background-image: linear-gradient(150deg, rgba(63, 174, 255, .3)15%, rgba(63, 174, 255, .3)70%, rgba(63, 174, 255, .3)94%), url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);height: 350px;background-size: cover;"></div>
+        <div class="img"
+             style="    background-image: linear-gradient(150deg, rgba(63, 174, 255, .3)15%, rgba(63, 174, 255, .3)70%, rgba(63, 174, 255, .3)94%), url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);height: 350px;background-size: cover;"></div>
         <div class="card social-prof">
             <div class="card-body">
                 <div class="wrapper">
@@ -118,7 +120,8 @@
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/assets/images/client-logo/aitu.jpg" class="d-block w-100" alt="Photo of organizaiton">
+                                    <img src="/assets/images/client-logo/aitu.jpg" class="d-block w-100"
+                                         alt="Photo of organizaiton">
                                 </div>
                             </div>
                         </div>
@@ -131,19 +134,23 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Leave a testimonial</a>
+                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                                   aria-controls="posts" aria-selected="true">Leave a testimonial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images" aria-selected="false" href="#images">Rate</a>
+                                <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images"
+                                   aria-selected="false" href="#images">Rate</a>
                             </li>
                         </ul>
                     </div>
                     <div class="card-body">
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade active show" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                            <div class="tab-pane fade active show" id="posts" role="tabpanel"
+                                 aria-labelledby="posts-tab">
                                 <div class="form-group">
                                     <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
+                                    <textarea class="form-control" id="message" rows="3"
+                                              placeholder="What are you thinking?"></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
@@ -151,22 +158,22 @@
                                     <div class="custom-file">
                                         <div class="rating">
 
- <input type="radio" name="rating" id="r1">
- <label for="r1"></label>
+                                            <input type="radio" name="rating" id="r1">
+                                            <label for="r1"></label>
 
- <input type="radio" name="rating" id="r2">
- <label for="r2"></label>
+                                            <input type="radio" name="rating" id="r2">
+                                            <label for="r2"></label>
 
- <input type="radio" name="rating" id="r3">
- <label for="r3"></label>
+                                            <input type="radio" name="rating" id="r3">
+                                            <label for="r3"></label>
 
- <input type="radio" name="rating" id="r4">
- <label for="r4"></label>
+                                            <input type="radio" name="rating" id="r4">
+                                            <label for="r4"></label>
 
- <input type="radio" name="rating" id="r5">
- <label for="r5"></label>
+                                            <input type="radio" name="rating" id="r5">
+                                            <label for="r5"></label>
 
-</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="py-4"></div>
@@ -185,7 +192,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                                    <img class="rounded-circle" width="45"
+                                         src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0 text-blue">@JeffBezos</div>
@@ -194,7 +202,8 @@
                             </div>
                             <div>
                                 <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop11"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop11">
@@ -205,9 +214,9 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>22.05.2020</div>
+                        <div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>22.05.2020</div>
                         <p class="card-text">
-                             Practice lessons are great!
+                            Practice lessons are great!
                         </p>
                     </div>
                 </div>
@@ -217,7 +226,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+                                    <img class="rounded-circle" width="45"
+                                         src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0 text-blue">@ElonMask</div>
@@ -226,7 +236,8 @@
                             </div>
                             <div>
                                 <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
@@ -237,9 +248,9 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>18.05.2022</div>
+                        <div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>18.05.2022</div>
                         <p class="card-text">
-                             Lectures are intimidating!
+                            Lectures are intimidating!
                         </p>
                     </div>
                 </div>
@@ -250,7 +261,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                                    <img class="rounded-circle" width="45"
+                                         src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0 text-blue">@WillSmith</div>
@@ -259,7 +271,8 @@
                             </div>
                             <div>
                                 <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop2"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop2">
@@ -270,7 +283,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>25.04.2022</div>
+                        <div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i>25.04.2022</div>
                         <p class="card-text">
                             Teaches good, but boring.
                         </p>
@@ -337,393 +350,398 @@
 </main>
 
 <style type="text/css">
-body {
-    background-color: #f0f6ff;
-    color: #28384d;
+    body {
+        background-color: #f0f6ff;
+        color: #28384d;
 
-}
-/*social */
-.card-one {
-    position: relative;
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
-}
-.card {
-    margin-bottom: 35px;
-    box-shadow: 0 10px 20px 0 rgba(26, 44, 57, 0.14);
-    border: none;
-}
+    }
 
-.follower-wrapper li {
-    list-style-type: none;
-    color: #fff;
-    display: inline-block;
-    float: left;
-    margin-right: 20px;
-}
+    /*social */
+    .card-one {
+        position: relative;
+        width: 300px;
+        background: #fff;
+        box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
+    }
 
-.social-profile {
-    color: #fff;
-}
+    .card {
+        margin-bottom: 35px;
+        box-shadow: 0 10px 20px 0 rgba(26, 44, 57, 0.14);
+        border: none;
+    }
 
-.social-profile a {
-    color: #fff;
-}
+    .follower-wrapper li {
+        list-style-type: none;
+        color: #fff;
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+    }
 
-.social-profile {
-    position: relative;
-    margin-bottom: 150px;
-}
+    .social-profile {
+        color: #fff;
+    }
 
-.social-profile .user-profile {
-    position: absolute;
-    bottom: -75px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    left: 50px;
-}
+    .social-profile a {
+        color: #fff;
+    }
 
-.social-nav {
-    position: absolute;
-    bottom: 0;
-}
+    .social-profile {
+        position: relative;
+        margin-bottom: 150px;
+    }
 
-.social-prof {
-    color: #333;
-    text-align: center;
-}
+    .social-profile .user-profile {
+        position: absolute;
+        bottom: -75px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        left: 50px;
+    }
 
-.social-prof .wrapper {
-    width: 70%;
-    margin: auto;
-    margin-top: -100px;
-}
+    .social-nav {
+        position: absolute;
+        bottom: 0;
+    }
 
-.social-prof img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 5px solid #fff;
-    /*border: 10px solid #70b5e6ee;*/
-}
+    .social-prof {
+        color: #333;
+        text-align: center;
+    }
 
-.social-prof h3 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 0;
-}
+    .social-prof .wrapper {
+        width: 70%;
+        margin: auto;
+        margin-top: -100px;
+    }
 
-.social-prof p {
-    font-size: 18px;
-}
+    .social-prof img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 5px solid #fff;
+        /*border: 10px solid #70b5e6ee;*/
+    }
 
-.social-prof .nav-tabs {
-    border: none;
-}
+    .social-prof h3 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
 
-.card .nav>li {
-    position: relative;
-    display: block;
-}
+    .social-prof p {
+        font-size: 18px;
+    }
 
-.card .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    font-weight: 300;
-    border-radius: 4px;
-}
+    .social-prof .nav-tabs {
+        border: none;
+    }
 
-.card .nav>li>a:focus,
-.card .nav>li>a:hover {
-    text-decoration: none;
-    background-color: #eee;
-}
+    .card .nav > li {
+        position: relative;
+        display: block;
+    }
 
-.card .s-nav>li>a.active {
-    text-decoration: none;
-    background-color: #3afe;
-    color: #fff;
-}
+    .card .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        font-weight: 300;
+        border-radius: 4px;
+    }
 
-.text-blue {
-    color: #3afe;
-}
+    .card .nav > li > a:focus,
+    .card .nav > li > a:hover {
+        text-decoration: none;
+        background-color: #eee;
+    }
 
-ul.friend-list {
-    margin: 0;
-    padding: 0;
-}
+    .card .s-nav > li > a.active {
+        text-decoration: none;
+        background-color: #3afe;
+        color: #fff;
+    }
 
-ul.friend-list li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
+    .text-blue {
+        color: #3afe;
+    }
 
-ul.friend-list li:hover {
-    background: rgba(0, 0, 0, .1);
-    cursor: pointer;
-}
+    ul.friend-list {
+        margin: 0;
+        padding: 0;
+    }
 
-ul.friend-list .left img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
+    ul.friend-list li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
 
-ul.friend-list li {
-    padding: 10px;
-}
+    ul.friend-list li:hover {
+        background: rgba(0, 0, 0, .1);
+        cursor: pointer;
+    }
 
-ul.friend-list .right h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 0;
-}
+    ul.friend-list .left img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
 
-ul.friend-list .right p {
-    font-size: 11px;
-    color: #6c757d;
-    margin: 0;
-}
+    ul.friend-list li {
+        padding: 10px;
+    }
 
-.social-timeline-card .dropdown-toggle::after {
-    display: none;
-}
+    ul.friend-list .right h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
 
-.info-card h4 {
-    font-size: 15px;
-}
+    ul.friend-list .right p {
+        font-size: 11px;
+        color: #6c757d;
+        margin: 0;
+    }
 
-.info-card h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+    .social-timeline-card .dropdown-toggle::after {
+        display: none;
+    }
 
-.social-about .social-info {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+    .info-card h4 {
+        font-size: 15px;
+    }
 
-.social-about p {
-    margin-bottom: 20px;
-}
+    .info-card h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 
-.info-card i {
-    color: #3afe;
-}
+    .social-about .social-info {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
 
-.card-one {
-    position: relative;
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
-}
+    .social-about p {
+        margin-bottom: 20px;
+    }
 
-.card-one .header {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    background-color: #3afe;
-}
+    .info-card i {
+        color: #3afe;
+    }
 
-.card-one .header::before,
-.card-one .header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: inherit;
-}
+    .card-one {
+        position: relative;
+        width: 300px;
+        background: #fff;
+        box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
+    }
 
-.card-one .header::before {
-    -webkit-transform: skewY(-8deg);
-    transform: skewY(-8deg);
-    -webkit-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-}
+    .card-one .header {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #3afe;
+    }
 
-.card-one .header::after {
-    -webkit-transform: skewY(8deg);
-    transform: skewY(8deg);
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-}
+    .card-one .header::before,
+    .card-one .header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: inherit;
+    }
 
-.card-one .header .avatar {
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    margin-left: -50px;
-    z-index: 5;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #ccc;
-    border: 3px solid #fff;
-}
+    .card-one .header::before {
+        -webkit-transform: skewY(-8deg);
+        transform: skewY(-8deg);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
 
-.card-one .header .avatar img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: auto;
-}
+    .card-one .header::after {
+        -webkit-transform: skewY(8deg);
+        transform: skewY(8deg);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+    }
 
-.card-one h3 {
-    position: relative;
-    margin: 80px 0 30px;
-    text-align: center;
-}
+    .card-one .header .avatar {
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        margin-left: -50px;
+        z-index: 5;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #ccc;
+        border: 3px solid #fff;
+    }
 
-.card-one h3::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    height: 1px;
-    background: #000;
-}
+    .card-one .header .avatar img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: auto;
+    }
 
-.card-one .desc {
-    padding: 0 1rem 2rem;
-    text-align: center;
-    line-height: 1.5;
-    color: #777;
-}
+    .card-one h3 {
+        position: relative;
+        margin: 80px 0 30px;
+        text-align: center;
+    }
 
-.card-one .contacts {
-    width: 200px;
-    max-width: 100%;
-    margin: 0 auto 3rem;
-}
+    .card-one h3::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 1px;
+        background: #000;
+    }
 
-.card-one .contacts a {
-    display: block;
-    width: 33.333333%;
-    float: left;
-    text-align: center;
-    color: #c8c;
-}
+    .card-one .desc {
+        padding: 0 1rem 2rem;
+        text-align: center;
+        line-height: 1.5;
+        color: #777;
+    }
 
-.card-one .contacts a:hover {
-    color: #333;
-}
+    .card-one .contacts {
+        width: 200px;
+        max-width: 100%;
+        margin: 0 auto 3rem;
+    }
 
-.card-one .contacts a:hover .fa::before {
-    color: #fff;
-}
+    .card-one .contacts a {
+        display: block;
+        width: 33.333333%;
+        float: left;
+        text-align: center;
+        color: #c8c;
+    }
 
-.card-one .contacts a:hover .fa::after {
-    width: 100%;
-    height: 100%;
-}
+    .card-one .contacts a:hover {
+        color: #333;
+    }
 
-.card-one .contacts a .fa {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    line-height: 39px;
-    overflow: hidden;
-    text-align: center;
-    font-size: 1.3em;
-}
+    .card-one .contacts a:hover .fa::before {
+        color: #fff;
+    }
 
-.card-one .contacts a .fa:before {
-    position: relative;
-    z-index: 1;
-}
+    .card-one .contacts a:hover .fa::after {
+        width: 100%;
+        height: 100%;
+    }
 
-.card-one .contacts a .fa::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: #c8c;
-    transition: width .3s, height .3s;
-}
+    .card-one .contacts a .fa {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        line-height: 39px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.3em;
+    }
 
-.card-one .contacts a:last-of-type .fa {
-    line-height: 36px;
-}
+    .card-one .contacts a .fa:before {
+        position: relative;
+        z-index: 1;
+    }
 
-.card-one .footer {
-    position: relative;
-    padding: 1rem;
-    background-color: #3afe;
-    text-align: center;
-}
+    .card-one .contacts a .fa::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: #c8c;
+        transition: width .3s, height .3s;
+    }
 
-.card-one .footer a {
-    padding: 0 1rem;
-    color: #e2e2e2;
-    transition: color .4s;
-}
+    .card-one .contacts a:last-of-type .fa {
+        line-height: 36px;
+    }
 
-.card-one .footer a:hover {
-    color: #c8c;
-}
+    .card-one .footer {
+        position: relative;
+        padding: 1rem;
+        background-color: #3afe;
+        text-align: center;
+    }
 
-.card-one .footer::before {
-    content: '';
-    position: absolute;
-    top: -27px;
-    left: 50%;
-    margin-left: -15px;
-    border: 15px solid transparent;
-    border-bottom-color: #3afe;
-}
+    .card-one .footer a {
+        padding: 0 1rem;
+        color: #e2e2e2;
+        transition: color .4s;
+    }
 
-.card-title, .card .card-title, .card-2 .card-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-a {
-    color: #333;
-}
-.badge {
-    font-size: 12px;
-    line-height: 1;
-    padding: .375rem .5625rem;
-    font-weight: normal;
-}
+    .card-one .footer a:hover {
+        color: #c8c;
+    }
 
-.badge-primary {
-    color: #447de8;
-    background-color: #e6edff;
-}
-.badge {
-    display: inline-block;
-    padding: .4em .5em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
+    .card-one .footer::before {
+        content: '';
+        position: absolute;
+        top: -27px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom-color: #3afe;
+    }
+
+    .card-title, .card .card-title, .card-2 .card-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #333;
+    }
+
+    .badge {
+        font-size: 12px;
+        line-height: 1;
+        padding: .375rem .5625rem;
+        font-weight: normal;
+    }
+
+    .badge-primary {
+        color: #447de8;
+        background-color: #e6edff;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: .4em .5em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
 
 
-/*end social*/
+    /*end social*/
 </style>
 
 <script type="text/javascript">
@@ -731,80 +749,81 @@ a {
 
 <footer class="footer-area footer-eleven">
     <div class="footer-top">
-      <div class="container">
-        <div class="inner-content">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="footer-widget f-about">
-                <div class="logo">
-                  <a href="index.html">
-                    <img src="{% static '/assets/images/black-white-logo.png' %}" alt="RateIt logo" class="img-fluid" />
-                  </a>
-                </div>
-                <p>
-                  Making the world a better place through constructive critic.
-                </p>
-                <p class="copyright-text">
-                  <span>© 2022 RateIt.</span>Designed and Developed by
-                  <a href="javascript:void(0)" rel="nofollow"> "Team Google" </a>
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <div class="footer-widget f-link">
-                <h5>Solutions</h5>
-                <ul>
-                  <li><a href="javascript:void(0)">Marketing</a></li>
-                  <li><a href="javascript:void(0)">Analytics</a></li>
-                  <li><a href="javascript:void(0)">Commerce</a></li>
-                  <li><a href="javascript:void(0)">Insights</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <div class="footer-widget f-link">
-                <h5>Support</h5>
-                <ul>
-                  <li><a href="javascript:void(0)">Pricing</a></li>
-                  <li><a href="javascript:void(0)">Documentation</a></li>
-                  <li><a href="javascript:void(0)">Guides</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="footer-widget f-link">
-                <h5>Follow Us</h5>
-                <ul>
-                  <li><a href="https://api.whatsapp.com/send?%20phone=87755129395">WhatsApp</a></li>
-                  <li><a href="https://t.me/YeraSz">Telegram</a></li>
-                  <li><a href="https://www.instagram.com/yerasap">Instagram</a></li>
-                </ul>
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-about">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static '/assets/images/black-white-logo.png' %}" alt="RateIt logo"
+                                         class="img-fluid"/>
+                                </a>
+                            </div>
+                            <p>
+                                Making the world a better place through constructive critic.
+                            </p>
+                            <p class="copyright-text">
+                                <span>© 2022 RateIt.</span>Designed and Developed by
+                                <a href="javascript:void(0)" rel="nofollow"> "Team Google" </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Solutions</h5>
+                            <ul>
+                                <li><a href="javascript:void(0)">Marketing</a></li>
+                                <li><a href="javascript:void(0)">Analytics</a></li>
+                                <li><a href="javascript:void(0)">Commerce</a></li>
+                                <li><a href="javascript:void(0)">Insights</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Support</h5>
+                            <ul>
+                                <li><a href="javascript:void(0)">Pricing</a></li>
+                                <li><a href="javascript:void(0)">Documentation</a></li>
+                                <li><a href="javascript:void(0)">Guides</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Follow Us</h5>
+                            <ul>
+                                <li><a href="https://api.whatsapp.com/send?%20phone=87755129395">WhatsApp</a></li>
+                                <li><a href="https://t.me/YeraSz">Telegram</a></li>
+                                <li><a href="https://www.instagram.com/yerasap">Instagram</a></li>
+                            </ul>
 
-              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
 <a href="#" class="scroll-top btn-hover">
     <i class="lni lni-chevron-up"></i>
-  </a>
+</a>
 
-  <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static '/assets/js/glightbox.min.js' %}"></script>
-  <script src="{% static '/assets/js/main.js' %}"></script>
-  <script src="{% static '/assets/js/tiny-slider.js' %}"></script>
+<script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/assets/js/glightbox.min.js' %}"></script>
+<script src="{% static '/assets/js/main.js' %}"></script>
+<script src="{% static '/assets/js/tiny-slider.js' %}"></script>
 
-  <script>
+<script>
 
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(
-      ".navbar-nine .navbar-toggler"
+        ".navbar-nine .navbar-toggler"
     );
     navbarTogglerNine.addEventListener("click", function () {
-      navbarTogglerNine.classList.toggle("active");
+        navbarTogglerNine.classList.toggle("active");
     });
 
     // ==== left sidebar toggle
@@ -813,32 +832,32 @@ a {
     let sidebarClose = document.querySelector(".sidebar-close .close");
 
     overlayLeft.addEventListener("click", function () {
-      sidebarLeft.classList.toggle("open");
-      overlayLeft.classList.toggle("open");
+        sidebarLeft.classList.toggle("open");
+        overlayLeft.classList.toggle("open");
     });
     sidebarClose.addEventListener("click", function () {
-      sidebarLeft.classList.remove("open");
-      overlayLeft.classList.remove("open");
+        sidebarLeft.classList.remove("open");
+        overlayLeft.classList.remove("open");
     });
 
     // ===== navbar nine sideMenu
     let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
 
     sideMenuLeftNine.addEventListener("click", function () {
-      sidebarLeft.classList.add("open");
-      overlayLeft.classList.add("open");
+        sidebarLeft.classList.add("open");
+        overlayLeft.classList.add("open");
     });
 
     //========= glightbox
     GLightbox({
-      'href': 'https://www.youtube.com/watch?v=DiDzrmuXvto&feature=youtu.be',
-      'type': 'video',
-      'source': 'youtube',
-      'width': 900,
-      'autoplayVideos': true,
+        'href': 'https://www.youtube.com/watch?v=DiDzrmuXvto&feature=youtu.be',
+        'type': 'video',
+        'source': 'youtube',
+        'width': 900,
+        'autoplayVideos': true,
     });
 
-  </script>
+</script>
 
 </body>
 </html>
