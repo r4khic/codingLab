@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 /*===========================
-  COMMON css 
+  COMMON css
 ===========================*/
 :root {
   --font-family: "Inter", sans-serif;
@@ -387,7 +387,7 @@ p {
 
 
 /*===========================
-  NAVBAR css 
+  NAVBAR css
 ===========================*/
 .navbar-toggler:focus {
   box-shadow: none;
@@ -1149,7 +1149,7 @@ p {
 
 
 /*===========================
-  services css 
+  services css
 ===========================*/
 .services-eight {
   padding: 100px 0;

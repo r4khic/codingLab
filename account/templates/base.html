@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +16,90 @@
     <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}"/>
     <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'landing.css' %}"/>
+    <link rel="stylesheet" href="{% static 'division.css' %}"/>
+    <link rel="stylesheet" href="{% static 'search.css' %}"/>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<section class="navbar-area navbar-nine">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{% static '/assets/images/white-blue-logo.png' %}" alt="Logo"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
+                            aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="page-scroll active" href="#hero-area">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#about">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#services">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-btn d-none d-lg-inline-block">
+                        <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="sidebar-left">
+    <div class="sidebar-close">
+      <a class="close" href="#close"><i class="lni lni-close"></i></a>
+    </div>
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="{% url 'home' %}"><img src="{% static '/assets/images/black-white-logo.png' %}" alt="Logo" /></a>
+      </div>
+      <p class="text">Navigate through the service as fast as you wish.</p>
+      <div class="sidebar-menu">
+        <h5 class="menu-title">Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="{% url 'login' %}">Log in</a></li>
+          <li><a href="{% url 'signup' %}">Sign up</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-social align-items-center justify-content-center">
+        <h5 class="social-title">Follow Us On</h5>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/yerasap"><i class="lni lni-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?%20phone=87755129395"><i class="lni lni-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yerassyl-saparbekov-15b25b216"><i class="lni lni-linkedin-original"></i></a>
+          </li>
+          <li>
+            <a href="https://t.me/YeraSz"><i class="lni lni-telegram-original"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="overlay-left"></div>
+
+{% comment %}<nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
         <a href="{% url 'home' %}" class="navbar-brand">RATEIT</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -27,7 +108,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="{% url 'home' %}"
-                   class="nav-item nav-link  {% if request.path == '/' %}active{% endif %}">Home</a>
+                   class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
             </div>
 
             {% if request.user.is_authenticated %}
@@ -48,21 +129,140 @@
             {% endif %}
         </div>
     </div>
-</nav>
+</nav>{% endcomment %}
+
+
+
+<div class="split left">
+  <div class="centered">
+    <img src="img_avatar.png" alt="Photo">
+    <h2>Search for professor or organization</h2>
+    <form class="searchform cf">
+        <input type="text" placeholder="Type professor or organization name">
+        <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="img_avatar.png" alt="Photo">
+    <h2>Add a new one</h2>
+        <a href="#" class="btn primary-btn">Get Started</a>
+  </div>
+</div>
+
 </body>
 
 {% block content %}
 {% endblock content %}
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
+<footer class="footer-area footer-eleven">
+    <div class="footer-top">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-about">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static '/assets/images/black-white-logo.png' %}" alt="RateIt logo"
+                                         class="img-fluid"/>
+                                </a>
+                            </div>
+                            <p>
+                                Making the world a better place through constructive critic.
+                            </p>
+                            <p class="copyright-text">
+                                <span>© 2022 RateIt.</span>Designed and Developed by
+                                <a href="javascript:void(0)" rel="nofollow"> "Team Google" </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Support</h5>
+                            <ul>
+                                <li><a href="javascript:void(0)">Documentation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-widget f-link">
+                            <h5>Follow Us</h5>
+                            <ul>
+                                <li><a href="https://api.whatsapp.com/send?%20phone=87755129395">WhatsApp</a></li>
+                                <li><a href="https://t.me/YeraSz">Telegram</a></li>
+                                <li><a href="https://www.instagram.com/yerasap">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"></i>
+</a>
+
+<script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/assets/js/glightbox.min.js' %}"></script>
+<script src="{% static '/assets/js/main.js' %}"></script>
+<script src="{% static '/assets/js/tiny-slider.js' %}"></script>
+
+<script>
+
+    //===== close navbar-collapse when a  clicked
+    let navbarTogglerNine = document.querySelector(
+        ".navbar-nine .navbar-toggler"
+    );
+    navbarTogglerNine.addEventListener("click", function () {
+        navbarTogglerNine.classList.toggle("active");
+    });
+
+    // ==== left sidebar toggle
+    let sidebarLeft = document.querySelector(".sidebar-left");
+    let overlayLeft = document.querySelector(".overlay-left");
+    let sidebarClose = document.querySelector(".sidebar-close .close");
+
+    overlayLeft.addEventListener("click", function () {
+        sidebarLeft.classList.toggle("open");
+        overlayLeft.classList.toggle("open");
+    });
+    sidebarClose.addEventListener("click", function () {
+        sidebarLeft.classList.remove("open");
+        overlayLeft.classList.remove("open");
+    });
+
+    // ===== navbar nine sideMenu
+    let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
+
+    sideMenuLeftNine.addEventListener("click", function () {
+        sidebarLeft.classList.add("open");
+        overlayLeft.classList.add("open");
+    });
+
+    //========= glightbox
+    GLightbox({
+        'href': 'https://www.youtube.com/watch?v=DiDzrmuXvto&feature=youtu.be',
+        'type': 'video',
+        'source': 'youtube',
+        'width': 900,
+        'autoplayVideos': true,
+    });
+
+</script>
+
 </body>
 </html>

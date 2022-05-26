@@ -45,7 +45,7 @@ urlpatterns = [
         template_name='password_change_done.html'),
          name='password_change_done'),
     path('profile/<username>/', views.profile, name='profile'),
-    path('edit-profile', views.edit_profile, name='edit_profile'),
+    path('edit-profile/', views.edit_profile, name='edit_profile/'),
     path('someone-profile', views.someone_profile, name='someone_profile'),
     path('add-profile', views.add_profile, name='add_profile'),
 ]
