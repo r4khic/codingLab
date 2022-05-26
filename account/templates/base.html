@@ -2,25 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>{% block head_title %} Welcome - RATEIT{% endblock %}</title>
-    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/svg"/>
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'assets/css/lineicons.css' %}"/>
-    <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}"/>
-    <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'landing.css' %}"/>
-    <link rel="stylesheet" href="{% static 'division.css' %}"/>
-    <link rel="stylesheet" href="{% static 'search.css' %}"/>
-</head>
+{% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+              crossorigin="anonymous">
+        <title>{% block head_title %} Welcome - RATEIT{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/svg"/>
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/lineicons.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'landing.css' %}"/>
+        <link rel="stylesheet" href="{% static 'division.css' %}"/>
+        <link rel="stylesheet" href="{% static 'search.css' %}"/>
+    </head>
+{% endblock head %}
 
 <body>
-
 {% block header %}
     <section class="navbar-area navbar-nine">
         <div class="container">
