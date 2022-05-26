@@ -140,7 +140,7 @@
 
     <div class="split left">
         <div class="centered">
-            <img src="img_avatar.png" alt="Photo">
+            <img src="{% static 'assets/images/base/p_search.png' %}" alt="Professor">
             <h2>Search for professor or organization</h2>
             <form class="searchform cf">
                 <input type="text" placeholder="Type professor or organization name">
@@ -151,9 +151,9 @@
 
     <div class="split right">
         <div class="centered">
-            <img src="img_avatar.png" alt="Photo">
+            <img src="{% static 'assets/images/base/p_add.png' %}" alt="Photo">
             <h2>Add a new one</h2>
-            <a href="#" class="btn primary-btn">Get Started</a>
+            <a href="{% url 'add_profile' %}" class="btn primary-btn">Get Started</a>
         </div>
     </div>
 {% endblock content %}
