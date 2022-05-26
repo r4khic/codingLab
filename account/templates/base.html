@@ -108,45 +108,7 @@
 
 {% endblock header %}
 
-
-
-
 {% block content %}
-
-
-    {% comment %}<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <div class="container">
-        <a href="{% url 'home' %}" class="navbar-brand">RATEIT</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="{% url 'home' %}"
-                   class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
-            </div>
-
-            {% if request.user.is_authenticated %}
-                <div class="navbar-nav ml-auto">
-                    <a href="{% url 'profile' request.user.username %}"
-                       class="nav-item nav-link {% if request.user.username in request.path %}active{% endif %}">
-                        Profile
-                    </a>
-                    <a href="{% url 'logout' %}" class="nav-item nav-link">Log out</a>
-                </div>
-            {% else %}
-                <div class="navbar-nav ml-auto">
-                    <a href="{% url 'login' %}"
-                       class="nav-item nav-link {% if request.path == '/users/login/' %}active{% endif %}">Log in</a>
-                    <a href="{% url 'signup' %}"
-                       class="nav-item nav-link {% if request.path == '/users/signup/' %}active{% endif %}">Sign up</a>
-                </div>
-            {% endif %}
-        </div>
-    </div>
-</nav>{% endcomment %}
-
-
     <div class="split left">
         <div class="centered">
             <img src="{% static 'assets/images/base/p_search.png' %}" alt="Professor">
