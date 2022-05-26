@@ -15,12 +15,11 @@ class Profile(models.Model):
         ('Professor', 'Professor'),
         ('Student', 'Student'),
     )
-    about_me = models.TextField()
-    image = models.ImageField(upload_to='profile_image', null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_category = models.CharField(max_length=100, choices=profile_category, null=True, default='Student')
     nickname = models.CharField(max_length=100, blank=True)
     organization = models.CharField(max_length=100, blank=True)
+    rating = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.user.username

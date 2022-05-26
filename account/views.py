@@ -61,13 +61,28 @@ def profile(request, username):
     return render(request, 'profile.html', {'profile': profile, 'user': user})
 
 
-def edit_profile(request):
-    return render(request, 'edit_profile.html')
+def edit_profile(request, username):
+    user = get_object_or_404(User, username=username)
+    profile = get_object_or_404(Profile, user=user)
+    if request.method == "POST":
+        new_firstname = request.POST.get('firstname')
+        new_secondname = request.POST.get('secondname')
+        new_email = request.POST.get('email')
+        new_nickname = request.POST.get('nickname')
+        new_organization = request.POST.get('organization')
+        user.first_name = new_firstname
+        user.second_name = new_secondname
+        user.email = new_email
+        profile.nickname = new_nickname
+        profile.organization = new_organization
+        user.save()
+        profile.save()
+    return render(request, 'edit_profile.html', {'profile': profile, 'user': user})
 
 
 def someone_profile(request):
     return render(request, 'someone_profile.html')
 
 
-def add_profile(request):
+def add_profile(request, ):
     return render(request, 'add_profile.html')
