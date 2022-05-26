@@ -18,7 +18,7 @@ class Profile(models.Model):
     about_me = models.TextField()
     image = models.ImageField(upload_to='profile_image', null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_category = models.CharField(max_length=100, choices=profile_category, null=True)
+    profile_category = models.CharField(max_length=100, choices=profile_category, null=True, default='Student')
     nickname = models.CharField(max_length=100, blank=True)
     organization = models.CharField(max_length=100, blank=True)
 
@@ -26,8 +26,6 @@ class Profile(models.Model):
         return self.user.username
 
 
-class Institution(models.Model):
-    about_institution = models.TextField()
-
-    nickname = models.CharField(max_length=100, blank=True)
-    organization = models.CharField(max_length=100, blank=True)
+class Organization(models.Model):
+    organization_name = models.CharField(max_length=100, blank=True)
+    about_organization = models.CharField(max_length=250, blank=True)
