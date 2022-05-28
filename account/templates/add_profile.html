@@ -203,17 +203,15 @@
             <h2>Please, provide all the information below</h2>
         </div>
         <div class="info">
-            <input class="fname" type="text" name="name" placeholder="First name">
-            <input class="sname" type="text" name="name" placeholder="Second name">
-            <input type="text" name="name" placeholder="E-mail">
-            <input type="text" name="name" placeholder="Nickname">
-            <input type="password" name="name" placeholder="Password">
-            <select>
-                <option value="professor" selected>Professor</option>
-                <option value="institution">Institution (organizaiton)</option>
-            </select>
+            <form method="post">
+                {% csrf_token %}
+                <input class="fname" type="text" name="fname" placeholder="First name">
+                <input class="sname" type="text" name="sname" placeholder="Second name">
+                <input class="organization" type="text" name="organization" placeholder="Organization">
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <button type="submit" href="/">Submit</button>
+
     </form>
 </div>
 

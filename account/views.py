@@ -60,7 +60,7 @@ def profile(request, username):
     profile = get_object_or_404(Profile, user=user)
     return render(request, 'profile.html', {'profile': profile, 'user': user})
 
-
+@login_required
 def edit_profile(request, username):
     user = get_object_or_404(User, username=username)
     profile = get_object_or_404(Profile, user=user)
@@ -83,6 +83,13 @@ def edit_profile(request, username):
 def someone_profile(request):
     return render(request, 'someone_profile.html')
 
-
-def add_profile(request, ):
-    return render(request, 'add_profile.html')
+@login_required
+def add_profile(request):
+    user = get_object_or_404(User, username='professorAddUser')
+    if request.method == "POST":
+        new_firstname = request.POST.get('fname')
+        new_secondname = request.POST.get('sname')
+        new_organization = request.POST.get('organization')
+        profile_obj = Profile.objects.create(user=user, first_name =new_firstname, second_name= new_secondname, organization= new_organization)
+        profile_obj.save()
+    return render(request, 'add_profile.html', {'profile': profile, 'user': user})

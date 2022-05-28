@@ -20,6 +20,8 @@ class Profile(models.Model):
     nickname = models.CharField(max_length=100, blank=True)
     organization = models.CharField(max_length=100, blank=True)
     rating = models.IntegerField(blank=True, null=True)
+    first_name = models.CharField(max_length=100, blank=True)
+    second_name = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.user.username
