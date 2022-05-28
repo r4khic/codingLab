@@ -25,6 +25,14 @@ class Profile(models.Model):
         return self.user.username
 
 
+class Professor(models.Model):
+    profile_category = models.CharField(max_length=100, null=True, default='Professor')
+    organization = models.CharField(max_length=100, blank=True)
+    rating = models.IntegerField(blank=True, null=True, default=5)
+    first_name = models.CharField(max_length=100, blank=True)
+    second_name = models.CharField(max_length=100, blank=True)
+
+
 class Organization(models.Model):
     organization_name = models.CharField(max_length=100, blank=True)
     about_organization = models.CharField(max_length=250, blank=True)

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.urls import reverse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import User, Profile
+from .models import User, Profile, Professor
 from .forms import SignUpForm, LoginForm
 
 
@@ -60,6 +60,7 @@ def profile(request, username):
     profile = get_object_or_404(Profile, user=user)
     return render(request, 'profile.html', {'profile': profile, 'user': user})
 
+
 @login_required
 def edit_profile(request, username):
     user = get_object_or_404(User, username=username)
@@ -83,13 +84,13 @@ def edit_profile(request, username):
 def someone_profile(request):
     return render(request, 'someone_profile.html')
 
+
 @login_required
 def add_profile(request):
-    # user = get_object_or_404(User, use)
-    # if request.method == "POST":
-    #     new_firstname = request.POST.get('fname')
-    #     new_secondname = request.POST.get('sname')
-    #     new_organization = request.POST.get('organization')
-    #     profile_obj = Profile.objects.create(user=user, first_name =new_firstname, second_name= new_secondname, organization= new_organization)
-    #     profile_obj.save()
+    if request.method == "POST":
+        first_name = request.POST.get('fname')
+        second_name = request.POST.get('sname')
+        organization = request.POST.get('organization')
+        email = request.POST.get('Email')
+        professor_instance = Professor.objects.create(first_name, second_name, organization, email)
     return render(request, 'add_profile.html')
