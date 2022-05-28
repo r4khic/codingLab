@@ -85,11 +85,11 @@ def someone_profile(request):
 
 @login_required
 def add_profile(request):
-    user = get_object_or_404(User, username='professorAddUser')
-    if request.method == "POST":
-        new_firstname = request.POST.get('fname')
-        new_secondname = request.POST.get('sname')
-        new_organization = request.POST.get('organization')
-        profile_obj = Profile.objects.create(user=user, first_name =new_firstname, second_name= new_secondname, organization= new_organization)
-        profile_obj.save()
-    return render(request, 'add_profile.html', {'profile': profile, 'user': user})
+    # user = get_object_or_404(User, use)
+    # if request.method == "POST":
+    #     new_firstname = request.POST.get('fname')
+    #     new_secondname = request.POST.get('sname')
+    #     new_organization = request.POST.get('organization')
+    #     profile_obj = Profile.objects.create(user=user, first_name =new_firstname, second_name= new_secondname, organization= new_organization)
+    #     profile_obj.save()
+    return render(request, 'add_profile.html')

@@ -47,5 +47,5 @@ urlpatterns = [
     path('profile/<username>/', views.profile, name='profile'),
     path('edit-profile/<username>/', views.edit_profile, name='edit_profile'),  # http://127.0.0.1:8000/edit-profile/test777/  where test777 need write username
     path('someone-profile', views.someone_profile, name='someone_profile'),
-    path('add-profile/', views.add_profile, name='add_profile'),
+    path('add-profile', views.add_profile, name='add_profile'),
 ]
